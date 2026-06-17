@@ -75,8 +75,8 @@ transition:background 0.3s,color 0.3s,box-shadow 0.3s;
 .page{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;padding:50px 20px 80px}
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 .ornament{width:100%;max-width:480px;display:flex;align-items:center;gap:12px;margin:16px 0}
-.ornament::before,.ornament::after{content:’’;flex:1;height:1px;background:linear-gradient(90deg,transparent,#C9A96E,transparent)}
-.ornament span{color:#C9A96E;font-size:16px;letter-spacing:5px}
+.ornament-line{flex:1;height:1px;background:linear-gradient(90deg,rgba(201,169,110,0),#C9A96E 50%,rgba(201,169,110,0) 100%);display:block;min-width:30px;opacity:1 !important;}
+.ornament span{color:#C9A96E;font-size:16px;letter-spacing:5px;flex-shrink:0;}
 .monogram-wrap{margin:8px 0;opacity:0;animation:fadeUp .8s .2s forwards}
 .monogram{width:112px;height:112px;border-radius:50%;border:1.5px solid #C9A96E;display:flex;align-items:center;justify-content:center;position:relative;background:radial-gradient(circle,#1e140a,#0D0A07);box-shadow:0 0 36px #c9a96e1a,inset 0 0 16px #c9a96e0d}
 .monogram::before{content:’’;position:absolute;inset:6px;border-radius:50%;border:.5px solid #c9a96e44}
@@ -190,6 +190,13 @@ flex-shrink:0;
 .toast.show{transform:translateX(-50%) translateY(0)}
 .bottom-note{margin-top:44px;text-align:center;opacity:0;animation:fadeUp .8s 1.7s forwards}
 .bottom-note p{font-size:13px;color:#c9a96e33;letter-spacing:1px;line-height:2.2}
+
+/* GitHub Pages fallback: ensure animated elements are visible */
+.monogram-wrap,.headline,.date-block,.couple-wrap,.countdown-wrap,
+.location-section,.timeline-title,.rsvp-section,.guest-count,.bottom-note{
+opacity:1 !important;
+}
+.ornament,.ornament-line{opacity:1 !important;}
 </style>
 
 </head>
@@ -215,7 +222,7 @@ flex-shrink:0;
 
 <div class="page" id="main-page" style="opacity:0;pointer-events:none">
 
-  <div class="ornament" style="opacity:0;animation:fadeUp .7s .1s forwards"><span>✦ ✦ ✦</span></div>
+  <div class="ornament" style="opacity:1"><span class="ornament-line"></span><span>✦ ✦ ✦</span><span class="ornament-line"></span></div>
 
   <div class="monogram-wrap">
     <div class="monogram">
@@ -229,7 +236,7 @@ flex-shrink:0;
     <div class="en-names">Islam &amp; Alaa</div>
   </div>
 
-  <div class="ornament" style="opacity:0;animation:fadeUp .7s .7s forwards"><span>◆</span></div>
+  <div class="ornament" style="opacity:1"><span class="ornament-line"></span><span>◆</span><span class="ornament-line"></span></div>
 
   <div class="date-block">
     <div class="date-ar">الأربعاء ٢٣ يوليو ٢٠٢٦</div>
@@ -359,7 +366,7 @@ flex-shrink:0;
     <p>بسم الله الرحمن الرحيم<br/>﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا ﴾</p>
   </div>
 
-  <div class="ornament" style="margin-top:34px;opacity:0;animation:fadeUp .7s 2s forwards"><span>✦ ✦ ✦</span></div>
+  <div class="ornament" style="margin-top:34px;opacity:1"><span class="ornament-line"></span><span>✦ ✦ ✦</span><span class="ornament-line"></span></div>
 </div>
 
 <div class="toast" id="toast"></div>
