@@ -1081,7 +1081,7 @@ function closeModal(id){document.getElementById(id).classList.remove('open');}
 function closeModalOutside(e,id){if(e.target===document.getElementById(id)) closeModal(id);}
 
 // ── MUSIC ──
-var MUSIC_URL='music.mp3';'; // paste a direct .mp3 link here (see chat for instructions)
+var MUSIC_URL='music.mp3'; // paste a direct .mp3 link here (see chat for instructions)
 var bgAudio=null, musicPlaying=false;
 function initMusic(){
   if(!MUSIC_URL||bgAudio) return;
