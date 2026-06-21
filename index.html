@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0"/>
 <meta name="color-scheme" content="light"/>
 <title>علاء & إسلام — ٢٣ يوليو ٢٠٢٦</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html,body{
@@ -106,6 +106,8 @@ position:relative;z-index:1;
 .hero-deco{
 position:absolute;inset:0;
 pointer-events:none;z-index:0;
+transform:translateY(var(–pearlScrollY,0px));
+transition:transform .25s ease-out;
 }
 .deco-pearl{
 position:absolute;border-radius:50%;
@@ -133,7 +135,7 @@ z-index:1;
 50%{transform:translateY(-8px) rotate(3deg);}
 }
 .deco-float{animation:decoFloat 6s ease-in-out infinite;}
-.hero-tag{font-size:20px;color:#8A6D2F;letter-spacing:6px;font-weight:700;margin-bottom:16px;position:relative;z-index:5;text-shadow:0 1px 8px rgba(255,255,255,0.8);}
+.hero-tag{font-family:‘Aref Ruqaa’,serif;font-size:26px;color:#8A6D2F;letter-spacing:4px;font-weight:700;margin-bottom:16px;position:relative;z-index:5;text-shadow:0 1px 8px rgba(255,255,255,0.85);}
 .hero-img{width:100%;max-width:480px;display:block;}
 
 /* wave divider */
@@ -146,8 +148,8 @@ position:relative;z-index:2;
 /* ── SECTION ── */
 .section{padding:0 16px;margin-bottom:16px;position:relative;z-index:1;}
 .sec-label{
-text-align:center;font-size:11px;color:#A89368;
-letter-spacing:4px;font-weight:600;
+text-align:center;font-family:‘Aref Ruqaa’,serif;font-size:16px;color:#A89368;
+letter-spacing:2px;font-weight:700;
 margin:24px 0 10px;
 }
 
@@ -166,7 +168,7 @@ margin-bottom:16px;line-height:1.2;
 }
 .mc-body{font-size:14px;color:#A89368;line-height:2.2;margin-bottom:14px;}
 .mc-heart{font-size:20px;color:#D4B98C;margin:8px 0;}
-.mc-names{font-size:24px;font-weight:700;color:#8A6D2F;}
+.mc-names{font-family:‘Aref Ruqaa’,serif;font-size:34px;font-weight:700;color:#8A6D2F;}
 
 /* ── LOCATION ── */
 .loc-card{
@@ -175,7 +177,7 @@ padding:20px;
 box-shadow:0 4px 24px rgba(138,109,47,0.08);
 text-align:center;
 }
-.loc-name{font-size:20px;font-weight:700;color:#8A6D2F;margin-bottom:4px;}
+.loc-name{font-family:‘Aref Ruqaa’,serif;font-size:26px;font-weight:700;color:#8A6D2F;margin-bottom:4px;}
 .loc-sub{font-size:13px;color:#A89368;font-style:italic;margin-bottom:14px;}
 .loc-btn{
 display:inline-flex;align-items:center;gap:8px;
@@ -202,7 +204,7 @@ padding:12px 20px;display:flex;justify-content:space-between;align-items:center;
 .date-body{padding:20px;text-align:center;}
 .date-day-num{font-size:80px;color:#8A6D2F;line-height:1;font-weight:900;}
 .date-sep{width:36px;height:1.5px;background:#EAE0C8;margin:8px auto;}
-.date-day-name{font-size:15px;color:#A89368;margin-bottom:4px;font-weight:600;}
+.date-day-name{font-family:‘Aref Ruqaa’,serif;font-size:18px;color:#A89368;margin-bottom:4px;font-weight:600;}
 .date-time{font-size:15px;color:#8A6D2F;font-weight:700;margin-bottom:16px;}
 .save-btn{
 display:inline-flex;align-items:center;gap:8px;
@@ -319,7 +321,7 @@ margin-left:16px;
 text-align:left;
 }
 .tl-time{font-size:9px;color:#D4B98C;letter-spacing:1px;font-weight:700;flex-shrink:0;white-space:nowrap;}
-.tl-name{font-size:14px;color:#8A6D2F;font-weight:700;line-height:1.3;}
+.tl-name{font-family:‘Aref Ruqaa’,serif;font-size:17px;color:#8A6D2F;font-weight:700;line-height:1.3;}
 .tl-desc{font-family:‘Cormorant Garamond’,serif;font-size:12px;font-style:italic;color:#A89368;line-height:1.4;}
 
 /* ── EVENT DETAILS CAPSULES ── */
@@ -340,7 +342,7 @@ padding:26px 20px;
 box-shadow:0 4px 24px rgba(138,109,47,0.08);
 text-align:center;
 }
-.rsvp-title{font-size:20px;font-weight:700;color:#8A6D2F;margin-bottom:5px;}
+.rsvp-title{font-family:‘Aref Ruqaa’,serif;font-size:24px;font-weight:700;color:#8A6D2F;margin-bottom:5px;}
 .rsvp-subtitle{font-size:13px;color:#A89368;margin-bottom:18px;}
 .rsvp-input{
 width:100%;padding:13px 18px;
@@ -484,7 +486,7 @@ transition:transform .35s cubic-bezier(.4,0,.2,1);
 }
 .modal-overlay.open .modal-sheet{transform:translateY(0);}
 .modal-handle{width:40px;height:4px;background:#EAE0C8;border-radius:4px;margin:0 auto 20px;}
-.modal-title{font-size:18px;font-weight:700;color:#8A6D2F;text-align:center;margin-bottom:20px;}
+.modal-title{font-family:‘Aref Ruqaa’,serif;font-size:24px;font-weight:700;color:#8A6D2F;text-align:center;margin-bottom:20px;}
 .modal-btn{
 display:flex;align-items:center;gap:14px;
 padding:16px 20px;border-radius:16px;
@@ -496,6 +498,18 @@ transition:background .2s;
 .modal-btn-icon{font-size:24px;}
 .modal-btn-text{font-size:15px;font-weight:700;color:#8A6D2F;}
 .modal-btn-sub{font-size:12px;color:#A89368;}
+.contact-person-label{
+font-family:‘Aref Ruqaa’,serif;
+font-size:18px;font-weight:700;color:#8A6D2F;
+margin:10px 4px 8px;text-align:right;
+}
+.contact-row{display:flex;gap:10px;margin-bottom:6px;}
+.contact-half{
+flex:1;padding:14px 12px;margin-bottom:0;
+flex-direction:column;align-items:center;text-align:center;gap:8px;
+}
+.contact-half .modal-btn-text{font-size:13px;}
+.contact-half .modal-btn-sub{font-size:10px;}
 .modal-close{
 width:100%;margin-top:8px;padding:13px;
 border:none;border-radius:50px;background:#FAF6EE;
@@ -979,15 +993,35 @@ box-shadow:0 1px 4px rgba(0,0,0,0.2);
   <div class="modal-sheet">
     <div class="modal-handle"></div>
     <div class="modal-title">تواصل معنا</div>
-    <a class="modal-btn" href="https://wa.me/96171214058" target="_blank">
-      <span class="modal-btn-icon">💬</span>
-      <div><div class="modal-btn-text">تواصل مع علاء</div><div class="modal-btn-sub" dir="ltr" style="text-align:right;">+961 71 214 058</div></div>
-    </a>
-    <a class="modal-btn" href="https://wa.me/96179115391" target="_blank">
-      <span class="modal-btn-icon">💬</span>
-      <div><div class="modal-btn-text">تواصل مع إسلام</div><div class="modal-btn-sub" dir="ltr" style="text-align:right;">+961 79 115 391</div></div>
-    </a>
-    <button class="modal-close" onclick="closeModal('contact-modal')">إغلاق</button>
+
+```
+<div class="contact-person-label">علاء</div>
+<div class="contact-row">
+  <a class="modal-btn contact-half" href="https://wa.me/96171214058" target="_blank">
+    <span class="modal-btn-icon">💬</span>
+    <div><div class="modal-btn-text">واتساب</div><div class="modal-btn-sub" dir="ltr" style="text-align:right;">+961 71 214 058</div></div>
+  </a>
+  <a class="modal-btn contact-half" href="tel:+96171214058">
+    <span class="modal-btn-icon">📞</span>
+    <div><div class="modal-btn-text">اتصال</div><div class="modal-btn-sub" dir="ltr" style="text-align:right;">+961 71 214 058</div></div>
+  </a>
+</div>
+
+<div class="contact-person-label">إسلام</div>
+<div class="contact-row">
+  <a class="modal-btn contact-half" href="https://wa.me/96179115391" target="_blank">
+    <span class="modal-btn-icon">💬</span>
+    <div><div class="modal-btn-text">واتساب</div><div class="modal-btn-sub" dir="ltr" style="text-align:right;">+961 79 115 391</div></div>
+  </a>
+  <a class="modal-btn contact-half" href="tel:+96179115391">
+    <span class="modal-btn-icon">📞</span>
+    <div><div class="modal-btn-text">اتصال</div><div class="modal-btn-sub" dir="ltr" style="text-align:right;">+961 79 115 391</div></div>
+  </a>
+</div>
+
+<button class="modal-close" onclick="closeModal('contact-modal')">إغلاق</button>
+```
+
   </div>
 </div>
 
@@ -1063,6 +1097,25 @@ box-shadow:0 1px 4px rgba(0,0,0,0.2);
       'animation-duration:'+(8+Math.random()*10)+'s;animation-delay:'+(Math.random()*12)+'s;';
     pe.appendChild(p);
   }
+})();
+
+// ── PEARLS: soft parallax float on scroll ──
+(function(){
+  var heroDeco=null;
+  var ticking=false;
+  function onScroll(){
+    if(!heroDeco) heroDeco=document.querySelector('.hero-deco');
+    if(!heroDeco||ticking) return;
+    ticking=true;
+    requestAnimationFrame(function(){
+      ticking=false;
+      var sy=window.scrollY;
+      // gentle, clamped drift — pearls/flowers float slowly as you scroll
+      var offset=Math.max(-30,Math.min(30,sy*0.06));
+      heroDeco.style.setProperty('--pearlScrollY', offset.toFixed(1)+'px');
+    });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
 })();
 
 // ── CURTAIN OPEN ──
@@ -1228,6 +1281,41 @@ function goToLocation(){
 function openModal(id){document.getElementById(id).classList.add('open');}
 function closeModal(id){document.getElementById(id).classList.remove('open');}
 function closeModalOutside(e,id){if(e.target===document.getElementById(id)) closeModal(id);}
+
+// ── DRAG-TO-CLOSE for modal sheets ──
+(function(){
+  var sheets=document.querySelectorAll('.modal-sheet');
+  sheets.forEach(function(sheet){
+    var overlay=sheet.parentElement;
+    var startY=0,currentY=0,dragging=false;
+    function onStart(y){startY=y;currentY=y;dragging=true;sheet.style.transition='none';}
+    function onMove(y){
+      if(!dragging) return;
+      currentY=y;
+      var delta=Math.max(0,currentY-startY);
+      sheet.style.transform='translateY('+delta+'px)';
+    }
+    function onEnd(){
+      if(!dragging) return;
+      dragging=false;
+      sheet.style.transition='transform .35s cubic-bezier(.4,0,.2,1)';
+      var delta=Math.max(0,currentY-startY);
+      if(delta>90){
+        overlay.classList.remove('open');
+        setTimeout(function(){sheet.style.transform='';},350);
+      } else {
+        sheet.style.transform='translateY(0)';
+      }
+    }
+    sheet.addEventListener('touchstart',function(e){onStart(e.touches[0].clientY);},{passive:true});
+    sheet.addEventListener('touchmove',function(e){onMove(e.touches[0].clientY);},{passive:true});
+    sheet.addEventListener('touchend',onEnd,{passive:true});
+    // mouse support for desktop testing
+    sheet.addEventListener('mousedown',function(e){onStart(e.clientY);});
+    document.addEventListener('mousemove',function(e){if(dragging)onMove(e.clientY);});
+    document.addEventListener('mouseup',onEnd);
+  });
+})();
 
 // ── MUSIC ──
 var MUSIC_URL='music.mp3'; // Leberch — place music.mp3 next to index.html on GitHub
